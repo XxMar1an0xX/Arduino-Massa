@@ -35,6 +35,11 @@ void prender_progresivamente(short pin) {
 }
 
 void loop() {
+  bool todo_prendido = false;
+  //TODO: quizas hacer que se mantenga prendido(?)
+  // if todo_prendido {
+  //   digitalWrite()
+  // }
   for (short ojonumero = 1; ojonumero <= 5; ojonumero++) {
     switch
       (ojonumero) {
@@ -56,10 +61,13 @@ void loop() {
       };
       case 5: {
         prender_ojo(27, 14, 13);
+        todo_prendido = true;
         break;
       };
       default:
         break;
       }
   }
+
+
 }
